@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ShoppingCart, Calendar, Bell, Clock, Target } from "lucide-react";
+import { ExternalLink, ShoppingCart, Calendar, Bell, Clock, Target, BookOpen, GraduationCap, Users } from "lucide-react";
 import Image from "next/image";
 
 export default function FeaturedProjects() {
@@ -20,6 +20,20 @@ export default function FeaturedProjects() {
       // Since we don't have images, we will use a gradient placeholder using styling
       gradient: "from-purple-600 via-indigo-500 to-blue-500",
       highlight: true,
+    },
+    {
+      id: "prakash-institute",
+      title: "Prakash Institute Ranchi - EdTech Platform",
+      category: "I build educational platforms",
+      description: "A professional and high-converting coaching institute website with interactive course catalogs, student success showcases, and a streamlined enquiry system.",
+      features: [
+        { icon: <BookOpen size={16} />, text: "Interactive course directory (IIT-JEE, NEET)" },
+        { icon: <GraduationCap size={16} />, text: "Student success & Achievers showcase" },
+        { icon: <Users size={16} />, text: "Faculty profiling & Enquiry automation" },
+      ],
+      link: "https://prakashinstituteranchi.online",
+      gradient: "from-blue-600 via-cyan-500 to-teal-500",
+      highlight: false,
     },
   ];
 
