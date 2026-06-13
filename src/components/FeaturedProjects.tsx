@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ShoppingCart, Calendar, Bell, Clock, Target, BookOpen, GraduationCap, Users } from "lucide-react";
+import { ExternalLink, ShoppingCart, Calendar, Bell, Clock, Target, BookOpen, GraduationCap, Users, Trophy, Activity, MapPin, Dumbbell, Flame, CheckCircle } from "lucide-react";
 import Image from "next/image";
 
 export default function FeaturedProjects() {
@@ -33,6 +33,34 @@ export default function FeaturedProjects() {
       ],
       link: "https://prakashinstituteranchi.online",
       gradient: "from-blue-600 via-cyan-500 to-teal-500",
+      highlight: false,
+    },
+    {
+      id: "downtown-sports",
+      title: "Downtown Sports - Athletic Complex & Booking",
+      category: "I build sports platforms",
+      description: "A dynamic sports complex website featuring automated court booking, membership management, and real-time event schedules.",
+      features: [
+        { icon: <Trophy size={16} />, text: "Tournament registration & brackets" },
+        { icon: <MapPin size={16} />, text: "Facility mapping & court booking" },
+        { icon: <Activity size={16} />, text: "Real-time schedules & updates" },
+      ],
+      link: "https://downtownsports.online",
+      gradient: "from-green-500 via-emerald-500 to-teal-500",
+      highlight: false,
+    },
+    {
+      id: "ashutosh-fitness",
+      title: "Ashutosh Fitness - Personal Training & Coaching",
+      category: "I build fitness platforms",
+      description: "A comprehensive fitness coaching platform offering personalized workout plans, diet tracking, and client progress monitoring.",
+      features: [
+        { icon: <Dumbbell size={16} />, text: "Customized workout regimens" },
+        { icon: <Flame size={16} />, text: "Calorie & nutrition tracking" },
+        { icon: <CheckCircle size={16} />, text: "Client progress dashboards" },
+      ],
+      link: "https://ashutoshfitness.online",
+      gradient: "from-orange-500 via-red-500 to-rose-500",
       highlight: false,
     },
   ];
