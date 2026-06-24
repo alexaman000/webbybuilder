@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --glass-bg: rgba(20, 20, 20, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --primary: #ffffff;
-  --secondary: #a1a1aa;
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(212, 175, 55, 0.2);
+  --primary: #d4af37;
+  --secondary: #666666;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --glass-bg: rgba(20, 20, 20, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --primary: #ffffff;
-    --secondary: #a1a1aa;
+    --background: #fafafa;
+    --foreground: #1a1a1a;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(212, 175, 55, 0.2);
+    --primary: #d4af37;
+    --secondary: #666666;
   }
 }
 
@@ -50,12 +50,12 @@ body {
     @apply bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] shadow-2xl;
   }
   .bg-gradient-soft {
-    @apply bg-[#0a0a0a];
+    @apply bg-background;
   }
   .text-gradient {
-    @apply text-white;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] to-[#e5c158];
   }
   .premium-card {
-    @apply bg-neutral-900 border border-neutral-800 rounded-2xl shadow-xl transition-all duration-300 hover:border-neutral-700 hover:shadow-2xl;
+    @apply bg-white border border-[#d4af37]/20 rounded-2xl shadow-md transition-all duration-300 hover:border-[#d4af37]/50 hover:shadow-xl;
   }
 }

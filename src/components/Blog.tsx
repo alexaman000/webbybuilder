@@ -25,7 +25,7 @@ export default function Blog() {
   ];
 
   return (
-    <section id="blog" className="py-24 relative overflow-hidden bg-neutral-950">
+    <section id="blog" className="py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-xl">
@@ -33,24 +33,24 @@ export default function Blog() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-800 bg-neutral-900/50 mb-6 text-neutral-300 font-medium text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/5 mb-6 text-neutral-800 font-medium text-sm"
             >
-              <BookOpen size={16} />
-              <span>Resources</span>
+              <BookOpen size={16} className="text-[#d4af37]" />
+              <span className="uppercase tracking-widest text-xs font-bold text-neutral-600">Resources</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold font-outfit text-white"
+              className="text-4xl md:text-5xl font-bold font-outfit text-neutral-900"
             >
-              Latest from the <span className="text-white">Blog</span>
+              Latest from the <span className="text-gradient">Blog</span>
             </motion.h2>
           </div>
           
           <Link
             href="#"
-            className="group flex items-center gap-2 font-medium text-primary hover:text-secondary transition-colors mt-6 md:mt-0"
+            className="group flex items-center gap-2 font-medium text-[#d4af37] hover:text-[#c5a059] transition-colors mt-6 md:mt-0"
           >
             Read All Articles 
             <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -68,20 +68,20 @@ export default function Blog() {
                 className="premium-card p-8 group h-full hover:-translate-y-2 transition-transform duration-300"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <span className="px-3 py-1 rounded-full border border-neutral-700 text-neutral-300 text-xs font-semibold tracking-wider uppercase bg-neutral-800">
+                  <span className="px-3 py-1 rounded-full border border-[#d4af37]/30 text-[#d4af37] text-xs font-semibold tracking-wider uppercase bg-[#d4af37]/5">
                     {article.category}
                   </span>
                   <span className="text-neutral-500 text-sm font-medium">
                     {article.date} · {article.readTime}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-neutral-300 transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-neutral-900 group-hover:text-[#d4af37] transition-colors">
                   {article.title}
                 </h3>
-                <p className="text-neutral-400 mb-6 leading-relaxed font-light">
+                <p className="text-neutral-600 mb-6 leading-relaxed font-light">
                   {article.excerpt}
                 </p>
-                <div className="flex items-center mt-auto pt-4 text-sm font-bold text-white group-hover:text-neutral-300 transition-colors">
+                <div className="flex items-center mt-auto pt-4 text-sm font-bold text-neutral-900 group-hover:text-[#d4af37] transition-colors">
                   Read Article <ArrowUpRight size={16} className="ml-1" />
                 </div>
               </motion.div>

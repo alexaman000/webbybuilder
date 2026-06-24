@@ -53,7 +53,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} scroll-smooth`}
     >
-      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground antialiased selection:bg-neutral-800 selection:text-white">
+      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground antialiased selection:bg-[#d4af37]/30 selection:text-black">
         <Navbar />
         {children}
         <FloatingWhatsApp />

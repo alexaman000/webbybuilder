@@ -23,7 +23,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
-        scrolled ? "bg-[#0a0a0a]/80 backdrop-blur-lg border-white/10 py-4 shadow-sm" : "bg-transparent border-transparent py-6"
+        scrolled ? "bg-white/90 backdrop-blur-lg border-[#d4af37]/20 py-4 shadow-sm" : "bg-transparent border-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
@@ -37,25 +37,25 @@ export default function Navbar() {
             className="h-10 w-auto object-contain rounded-lg" 
             onError={(e) => { e.currentTarget.style.display = 'none'; }} 
           />
-          <div className="text-xl font-bold tracking-widest uppercase text-white">
-            Webby<span className="text-neutral-500 font-light">Builder</span>
+          <div className={`text-xl font-bold tracking-widest uppercase ${scrolled ? "text-neutral-900" : "text-white"}`}>
+            Webby<span className="text-[#d4af37] font-light">Builder</span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8 items-center">
-          <Link href="#projects" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">
+          <Link href="#projects" className={`text-sm font-medium transition-colors ${scrolled ? "text-neutral-600 hover:text-[#d4af37]" : "text-neutral-300 hover:text-white"}`}>
             Projects
           </Link>
-          <Link href="#services" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">
+          <Link href="#services" className={`text-sm font-medium transition-colors ${scrolled ? "text-neutral-600 hover:text-[#d4af37]" : "text-neutral-300 hover:text-white"}`}>
             Services
           </Link>
-          <Link href="#contact" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">
+          <Link href="#contact" className={`text-sm font-medium transition-colors ${scrolled ? "text-neutral-600 hover:text-[#d4af37]" : "text-neutral-300 hover:text-white"}`}>
             Contact
           </Link>
           <Link
             href="#contact"
-            className="px-6 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-neutral-200 transition-colors"
+            className="px-6 py-2.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c5a059] transition-colors shadow-lg shadow-[#d4af37]/20"
           >
             Start a Project
           </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
         {/* Mobile menu toggle */}
         <div className="flex items-center gap-4 md:hidden">
           <button
-            className="text-white"
+            className={scrolled ? "text-neutral-900" : "text-white"}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -77,21 +77,21 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 w-full bg-[#0a0a0a] border-b border-white/10 p-6 flex flex-col space-y-4 shadow-2xl"
+          className="md:hidden absolute top-full left-0 w-full bg-white border-b border-[#d4af37]/20 p-6 flex flex-col space-y-4 shadow-2xl"
         >
-          <Link href="#projects" className="block text-lg font-medium text-neutral-300 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#projects" className="block text-lg font-medium text-neutral-700 hover:text-[#d4af37]" onClick={() => setIsMobileMenuOpen(false)}>
             Projects
           </Link>
-          <Link href="#services" className="block text-lg font-medium text-neutral-300 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#services" className="block text-lg font-medium text-neutral-700 hover:text-[#d4af37]" onClick={() => setIsMobileMenuOpen(false)}>
             Services
           </Link>
-          <Link href="#contact" className="block text-lg font-medium text-neutral-300 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#contact" className="block text-lg font-medium text-neutral-700 hover:text-[#d4af37]" onClick={() => setIsMobileMenuOpen(false)}>
             Contact
           </Link>
           <Link
             href="#contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="w-full text-center px-6 py-3 rounded-xl bg-white text-black font-semibold mt-4"
+            className="w-full text-center px-6 py-3 rounded-xl bg-[#d4af37] text-white font-semibold mt-4 shadow-lg shadow-[#d4af37]/20"
           >
             Start a Project
           </Link>
