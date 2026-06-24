@@ -26,15 +26,15 @@ export default function BonusTemplates() {
   ];
 
   return (
-    <section className="py-24 relative bg-foreground/5">
+    <section className="py-24 relative bg-background">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div className="max-w-2xl">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 text-primary font-medium text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-800 bg-neutral-900/50 mb-6 text-neutral-300 font-medium text-sm"
             >
               <Layout size={16} />
               <span>Free Previews</span>
@@ -43,9 +43,9 @@ export default function BonusTemplates() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold font-outfit"
+              className="text-4xl md:text-5xl font-bold font-outfit text-white"
             >
-              See Live Demo <span className="text-gradient">Templates</span>
+              See Live Demo <span className="text-white">Templates</span>
             </motion.h2>
           </div>
           
@@ -54,7 +54,7 @@ export default function BonusTemplates() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-foreground/60 max-w-sm mt-6 md:mt-0 md:text-right"
+            className="text-neutral-400 max-w-sm mt-6 md:mt-0 md:text-right font-light"
           >
             Hover over these mockups to see the premium quality of our pre-built layouts. Click to explore live previews!
           </motion.p>
@@ -86,8 +86,8 @@ export default function BonusTemplates() {
                 </div>
               </div>
               
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20 translate-y-4 group-hover:translate-y-0 transition-transform hidden md:block">
-                <span className="text-white/70 text-xs font-medium uppercase tracking-wider mb-1 block">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0a0a0a] to-transparent p-6 pt-20 translate-y-4 group-hover:translate-y-0 transition-transform hidden md:block">
+                <span className="text-neutral-400 text-xs font-medium uppercase tracking-[0.1em] mb-1 block">
                   {template.category}
                 </span>
                 <h3 className="text-2xl font-bold text-white leading-tight">
@@ -95,8 +95,8 @@ export default function BonusTemplates() {
                 </h3>
               </div>
               
-              <div className="absolute inset-x-0 bottom-0 bg-black/60 p-6 md:hidden">
-              <span className="text-white/70 text-xs font-medium uppercase tracking-wider mb-1 block">
+              <div className="absolute inset-x-0 bottom-0 bg-black/60 backdrop-blur-md p-6 md:hidden">
+                <span className="text-neutral-400 text-xs font-medium uppercase tracking-[0.1em] mb-1 block">
                   {template.category}
                 </span>
                 <h3 className="text-xl font-bold text-white leading-tight">

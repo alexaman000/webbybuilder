@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ShoppingCart, Calendar, Bell, Clock, Target, BookOpen, GraduationCap, Users, Trophy, Activity, MapPin, Dumbbell, Flame, CheckCircle } from "lucide-react";
+import { ExternalLink, ShoppingCart, Calendar, Bell, Clock, Target, BookOpen, GraduationCap, Users, Trophy, Activity, MapPin, Dumbbell, Flame, CheckCircle, Building2, Wrench, Shield } from "lucide-react";
 import Image from "next/image";
 
 export default function FeaturedProjects() {
@@ -63,6 +63,20 @@ export default function FeaturedProjects() {
       gradient: "from-orange-500 via-red-500 to-rose-500",
       highlight: false,
     },
+    {
+      id: "rudra-engineers",
+      title: "Rudra Engineers - Industrial & Engineering Services",
+      category: "I build corporate platforms",
+      description: "A robust corporate website for an engineering firm, featuring a comprehensive service catalog, project portfolios, and B2B inquiry generation.",
+      features: [
+        { icon: <Building2 size={16} />, text: "Corporate service catalog" },
+        { icon: <Wrench size={16} />, text: "Industrial project portfolio" },
+        { icon: <Shield size={16} />, text: "B2B lead generation system" },
+      ],
+      link: "https://rudraengineers.online",
+      gradient: "from-slate-600 via-gray-500 to-zinc-500",
+      highlight: false,
+    },
   ];
 
   return (
@@ -95,44 +109,44 @@ export default function FeaturedProjects() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="group relative rounded-3xl overflow-hidden glass hover:shadow-2xl transition-all duration-500"
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="group relative overflow-hidden premium-card"
             >
               <div 
                 className={`h-64 md:h-80 w-full bg-gradient-to-br ${project.gradient} p-8 flex items-center justify-center relative overflow-hidden`}
               >
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="relative z-10 w-full h-full glass rounded-xl flex items-center justify-center overflow-hidden transform group-hover:scale-105 transition-transform duration-700 hover:animate-pulse-glow"
+                  whileHover={{ scale: 1.02 }}
+                  className="relative z-10 w-full h-full bg-black/20 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center overflow-hidden transition-transform duration-500"
                 >
-                  <span className="text-3xl md:text-5xl font-bold text-white/80 select-none px-4 text-center leading-tight tracking-tight shadow-xl">
+                  <span className="text-3xl md:text-5xl font-bold text-white select-none px-4 text-center leading-tight tracking-tight shadow-xl">
                     {project.title.split('-')[0]}
                   </span>
                 </motion.div>
               </div>
 
               <div className="p-8">
-                <div className="text-primary font-semibold text-sm mb-2 uppercase tracking-wider">
+                <div className="text-white font-semibold text-xs mb-3 uppercase tracking-[0.2em]">
                   {project.category}
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-foreground/80 mb-6">{project.description}</p>
+                <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
+                <p className="text-neutral-400 mb-6 font-light leading-relaxed">{project.description}</p>
                 
                 <ul className="space-y-3 mb-8">
                   {project.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-foreground/80">
-                      <div className="p-1.5 rounded-full bg-primary/10 text-primary">
+                    <li key={i} className="flex items-center gap-3 text-neutral-300 font-light">
+                      <div className="p-1.5 rounded-full bg-neutral-800 text-white border border-neutral-700">
                         {feature.icon}
                       </div>
-                      <span className="font-medium">{feature.text}</span>
+                      <span>{feature.text}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a
                   href={project.link}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:scale-105 transition-transform w-full shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition-colors w-full"
                 >
                   View Live Website <ExternalLink size={18} />
                 </a>

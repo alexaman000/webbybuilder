@@ -25,15 +25,15 @@ export default function Blog() {
   ];
 
   return (
-    <section id="blog" className="py-24 relative overflow-hidden bg-white/30 dark:bg-black/20">
+    <section id="blog" className="py-24 relative overflow-hidden bg-neutral-950">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-xl">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 text-primary font-medium text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-800 bg-neutral-900/50 mb-6 text-neutral-300 font-medium text-sm"
             >
               <BookOpen size={16} />
               <span>Resources</span>
@@ -42,9 +42,9 @@ export default function Blog() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold font-outfit"
+              className="text-4xl md:text-5xl font-bold font-outfit text-white"
             >
-              Latest from the <span className="text-gradient">Blog</span>
+              Latest from the <span className="text-white">Blog</span>
             </motion.h2>
           </div>
           
@@ -64,25 +64,24 @@ export default function Blog() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                whileHover={{ y: -5 }}
-                className="glass p-8 rounded-3xl cursor-pointer group h-full"
+                transition={{ delay: index * 0.1 }}
+                className="premium-card p-8 group h-full hover:-translate-y-2 transition-transform duration-300"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
+                  <span className="px-3 py-1 rounded-full border border-neutral-700 text-neutral-300 text-xs font-semibold tracking-wider uppercase bg-neutral-800">
                     {article.category}
                   </span>
-                  <span className="text-foreground/50 text-sm font-medium">
+                  <span className="text-neutral-500 text-sm font-medium">
                     {article.date} · {article.readTime}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-neutral-300 transition-colors">
                   {article.title}
                 </h3>
-                <p className="text-foreground/70 mb-6 leading-relaxed">
+                <p className="text-neutral-400 mb-6 leading-relaxed font-light">
                   {article.excerpt}
                 </p>
-                <div className="flex items-center mt-auto pt-4 text-sm font-bold text-foreground group-hover:text-primary transition-colors">
+                <div className="flex items-center mt-auto pt-4 text-sm font-bold text-white group-hover:text-neutral-300 transition-colors">
                   Read Article <ArrowUpRight size={16} className="ml-1" />
                 </div>
               </motion.div>

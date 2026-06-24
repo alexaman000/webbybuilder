@@ -47,37 +47,34 @@ Please contact me.`;
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-24 relative bg-background">
       <div className="container mx-auto px-6 max-w-4xl relative z-10">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold font-outfit mb-4"
+            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-white"
           >
-            Let&apos;s build your <span className="text-gradient">Website</span>
+            Start Your <span className="text-white">Project</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-foreground/70 text-lg max-w-2xl mx-auto"
+            className="text-neutral-400 text-lg max-w-2xl mx-auto font-light"
           >
             Fill out the form below and I&apos;ll get back to you instantly via WhatsApp.
           </motion.p>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass p-8 md:p-12 rounded-3xl shadow-2xl relative"
+          className="premium-card p-8 md:p-12 relative"
         >
-          {/* Decorative blur */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-[-1]" />
-
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -89,7 +86,7 @@ Please contact me.`;
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full bg-white/5 border border-glass-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground"
+                  className="w-full bg-white/5 border border-neutral-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-white transition-all text-white"
                 />
               </div>
               <div className="space-y-2">
@@ -101,7 +98,7 @@ Please contact me.`;
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+91 00000 00000"
-                  className="w-full bg-white/5 border border-glass-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground"
+                  className="w-full bg-white/5 border border-neutral-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-white transition-all text-white"
                 />
               </div>
             </div>
@@ -116,7 +113,7 @@ Please contact me.`;
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@company.com"
-                  className="w-full bg-white/5 border border-glass-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground"
+                  className="w-full bg-white/5 border border-neutral-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-white transition-all text-white"
                 />
               </div>
               <div className="space-y-2">
@@ -126,7 +123,7 @@ Please contact me.`;
                   name="businessType"
                   value={formData.businessType}
                   onChange={handleChange}
-                  className="w-full bg-white/5 border border-glass-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground appearance-none"
+                  className="w-full bg-white/5 border border-neutral-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-white transition-all text-white appearance-none"
                 >
                   <option value="" disabled className="text-black">Select Business Type</option>
                   <option className="text-black" value="E-commerce">E-commerce</option>
@@ -145,7 +142,7 @@ Please contact me.`;
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full bg-white/5 border border-glass-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground appearance-none"
+                className="w-full bg-white/5 border border-neutral-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-white transition-all text-white appearance-none"
               >
                 <option value="" disabled className="text-black">Select your Budget scope</option>
                 <option className="text-black" value="₹3,999 - Landing Page">₹3,999 - Landing Page</option>
@@ -164,13 +161,13 @@ Please contact me.`;
                 onChange={handleChange}
                 placeholder="Tell me a bit about your project..."
                 rows={4}
-                className="w-full bg-white/5 border border-glass-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground resize-none"
+                className="w-full bg-white/5 border border-neutral-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-white transition-all text-white resize-none"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg hover:opacity-90 transition-all shadow-xl hover:shadow-primary/50 flex items-center justify-center gap-2"
+              className="w-full py-4 rounded-xl bg-white text-black font-semibold text-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2"
             >
               Submit & Open WhatsApp <Send size={20} />
             </button>
