@@ -9,29 +9,29 @@ export default function WhyChooseMe() {
       title: "Fast Delivery",
       description: "Get your website up and running in as little as 48 hours without compromising quality.",
       icon: <Zap size={32} />,
-      color: "text-[#d4af37]",
-      bg: "bg-[#d4af37]/10",
+      color: "text-white",
+      bg: "bg-white/10",
     },
     {
       title: "Affordable Pricing",
       description: "Premium SaaS-like websites at prices that make sense for growing businesses.",
       icon: <IndianRupee size={32} />,
-      color: "text-[#d4af37]",
-      bg: "bg-[#d4af37]/10",
+      color: "text-white",
+      bg: "bg-white/10",
     },
     {
       title: "Bespoke Design",
       description: "No boring templates. Unique, high-end designs tailored to your brand with sleek UI.",
       icon: <Palette size={32} />,
-      color: "text-[#d4af37]",
-      bg: "bg-[#d4af37]/10",
+      color: "text-white",
+      bg: "bg-white/10",
     },
     {
       title: "SEO Optimized",
       description: "Built with Next.js to ensure lightning-fast performance and top Google rankings.",
       icon: <Search size={32} />,
-      color: "text-[#d4af37]",
-      bg: "bg-[#d4af37]/10",
+      color: "text-white",
+      bg: "bg-white/10",
     },
   ];
 
@@ -43,7 +43,7 @@ export default function WhyChooseMe() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-neutral-900"
+            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-white"
           >
             Why Choose <span className="text-gradient">Us</span>?
           </motion.h2>
@@ -52,7 +52,7 @@ export default function WhyChooseMe() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-neutral-600 text-lg max-w-2xl mx-auto font-light"
+            className="text-neutral-400 text-lg max-w-2xl mx-auto font-light"
           >
             We focus on results, not just aesthetics. Here is what you can expect from our agency.
           </motion.p>
@@ -69,12 +69,12 @@ export default function WhyChooseMe() {
               className="premium-card p-8 text-center flex flex-col items-center justify-center transition-transform hover:-translate-y-2"
             >
               <div
-                className={`w-20 h-20 rounded-full ${reason.bg} ${reason.color} flex items-center justify-center mb-6 border border-[#d4af37]/20`}
+                className={`w-20 h-20 rounded-full ${reason.bg} ${reason.color} flex items-center justify-center mb-6 border border-white/10`}
               >
                 {reason.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 text-neutral-900">{reason.title}</h3>
-              <p className="text-neutral-600 leading-relaxed font-light">
+              <h3 className="text-xl font-bold mb-3 text-white">{reason.title}</h3>
+              <p className="text-neutral-400 leading-relaxed font-light">
                 {reason.description}
               </p>
             </motion.div>

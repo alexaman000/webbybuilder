@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #1a1a1a;
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(212, 175, 55, 0.2);
-  --primary: #d4af37;
-  --secondary: #666666;
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --primary: #ffffff;
+  --secondary: #a3a3a3;
+  --accent: #d4af37;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fafafa;
-    --foreground: #1a1a1a;
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(212, 175, 55, 0.2);
-    --primary: #d4af37;
-    --secondary: #666666;
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --glass-bg: rgba(255, 255, 255, 0.02);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --primary: #ffffff;
+    --secondary: #a3a3a3;
+    --accent: #d4af37;
   }
 }
 
@@ -25,6 +27,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --color-glass-bg: var(--glass-bg);
   --color-glass-border: var(--glass-border);
   --font-sans: var(--font-geist-sans);
@@ -47,15 +50,15 @@ body {
 
 @layer utilities {
   .glass {
-    @apply bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] shadow-2xl;
+    @apply bg-[var(--glass-bg)] backdrop-blur-2xl border border-[var(--glass-border)] shadow-2xl;
   }
   .bg-gradient-soft {
     @apply bg-background;
   }
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] to-[#e5c158];
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-neutral-200 to-neutral-500;
   }
   .premium-card {
-    @apply bg-white border border-[#d4af37]/20 rounded-2xl shadow-md transition-all duration-300 hover:border-[#d4af37]/50 hover:shadow-xl;
+    @apply bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl rounded-2xl transition-all duration-500 hover:bg-white/[0.04] hover:border-white/[0.15];
   }
 }

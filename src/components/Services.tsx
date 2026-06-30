@@ -47,17 +47,17 @@ export default function Services() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/5 text-neutral-800 font-medium text-sm mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-neutral-300 font-medium text-sm mb-6"
           >
-            <Sparkles size={16} className="text-[#d4af37]" />
-            <span className="uppercase tracking-widest text-xs font-bold text-neutral-600">Core Expertise</span>
+            <Sparkles size={16} className="text-white" />
+            <span className="uppercase tracking-widest text-xs font-bold text-neutral-400">Core Expertise</span>
           </motion.div>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-neutral-900"
+            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-white"
           >
             Digital Solutions for <span className="text-gradient">Growth</span>
           </motion.h2>
@@ -66,7 +66,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-neutral-600 text-lg max-w-2xl mx-auto font-light"
+            className="text-neutral-400 text-lg max-w-2xl mx-auto font-light"
           >
             Strategic, high-performance web solutions built to elevate your brand and drive results.
           </motion.p>
@@ -84,18 +84,18 @@ export default function Services() {
               className="premium-card p-8 group cursor-pointer block hover:-translate-y-2"
             >
               <div
-                className={`w-14 h-14 rounded-xl bg-gradient-to-br from-[#d4af37] to-[#e5c158] flex items-center justify-center mb-8 shadow-lg shadow-[#d4af37]/20 group-hover:scale-110 transition-transform duration-500`}
+                className={`w-14 h-14 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-500`}
               >
                 {service.icon}
               </div>
               
-              <h3 className="text-xl font-bold mb-3 text-neutral-900">{service.title}</h3>
-              <p className="text-neutral-600 mb-8 min-h-[4rem] font-light leading-relaxed">{service.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+              <p className="text-neutral-400 mb-8 min-h-[4rem] font-light leading-relaxed">{service.description}</p>
               
-              <div className="flex items-end justify-between border-t border-neutral-200 pt-6">
+              <div className="flex items-end justify-between border-t border-white/[0.08] pt-6">
                 <div>
                   <p className="text-xs font-semibold text-neutral-500 uppercase tracking-[0.2em] mb-1">Starting at</p>
-                  <p className="text-2xl font-bold font-outfit text-neutral-900">{service.price}</p>
+                  <p className="text-2xl font-bold font-outfit text-white">{service.price}</p>
                 </div>
               </div>
             </motion.a>

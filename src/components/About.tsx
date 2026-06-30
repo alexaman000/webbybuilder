@@ -46,25 +46,25 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/5 text-neutral-800 font-medium text-sm">
-              <User size={16} className="text-[#d4af37]" />
-              <span className="uppercase tracking-widest text-xs font-bold text-neutral-600">About Me</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-neutral-300 font-medium text-sm">
+              <User size={16} className="text-white" />
+              <span className="uppercase tracking-widest text-xs font-bold text-neutral-400">About Me</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold font-outfit text-neutral-900">
+            <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white">
               Hi, I am <span className="text-gradient">Aman Raj</span>
             </h2>
-            <p className="text-neutral-600 text-lg leading-relaxed max-w-lg font-light">
+            <p className="text-neutral-400 text-lg leading-relaxed max-w-lg font-light">
               I am a passionate Full Stack Developer specializing in building high-performance, premium websites that turn visitors into paying clients. My mission is to empower businesses with digital solutions that are fast, aesthetic, and highly converting.
             </p>
             
             <div className="pt-4 grid sm:grid-cols-2 gap-4">
                <div className="premium-card p-6 rounded-2xl">
-                 <h4 className="font-bold text-4xl text-neutral-900 mb-2">2+</h4>
-                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-neutral-500">Years Experience</p>
+                 <h4 className="font-bold text-4xl text-white mb-2">2+</h4>
+                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-neutral-400">Years Experience</p>
                </div>
                <div className="premium-card p-6 rounded-2xl">
-                 <h4 className="font-bold text-4xl text-neutral-900 mb-2">100%</h4>
-                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-neutral-500">Client Satisfaction</p>
+                 <h4 className="font-bold text-4xl text-white mb-2">100%</h4>
+                 <p className="text-xs font-semibold uppercase tracking-[0.1em] text-neutral-400">Client Satisfaction</p>
                </div>
             </div>
           </motion.div>
@@ -76,7 +76,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="premium-card p-8 rounded-3xl relative"
           >
-             <h3 className="text-2xl font-bold mb-8 text-neutral-900">Let&apos;s Connect</h3>
+             <h3 className="text-2xl font-bold mb-8 text-white">Let&apos;s Connect</h3>
              
              <div className="space-y-4">
                {contactLinks.map((contact, index) => (
@@ -85,14 +85,14 @@ export default function About() {
                    href={contact.href}
                    target={contact.label === "LinkedIn" || contact.label === "WhatsApp" ? "_blank" : "_self"}
                    rel="noopener noreferrer"
-                   className="flex items-center gap-4 p-4 rounded-2xl hover:bg-neutral-50 transition-colors border border-transparent hover:border-[#d4af37]/30 group"
+                   className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/20 group"
                  >
                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${contact.color} group-hover:scale-110 transition-transform`}>
                      {contact.icon}
                    </div>
                    <div>
-                     <p className="text-sm text-neutral-500 font-medium mb-0.5">{contact.label}</p>
-                     <p className="font-semibold text-neutral-900">{contact.value}</p>
+                     <p className="text-sm text-neutral-400 font-medium mb-0.5">{contact.label}</p>
+                     <p className="font-semibold text-white">{contact.value}</p>
                    </div>
                  </a>
                ))}

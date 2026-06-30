@@ -87,7 +87,7 @@ export default function FeaturedProjects() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-neutral-900"
+            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-white"
           >
             Featured <span className="text-gradient">Projects</span>
           </motion.h2>
@@ -96,7 +96,7 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-neutral-600 text-lg max-w-2xl mx-auto"
+            className="text-neutral-400 text-lg max-w-2xl mx-auto font-light"
           >
             Look at some of the awesome projects I&apos;ve built to solve real-world problems and boost business growth.
           </motion.p>
@@ -126,17 +126,17 @@ export default function FeaturedProjects() {
                 </motion.div>
               </div>
 
-              <div className="p-8 bg-white">
-                <div className="text-[#d4af37] font-semibold text-xs mb-3 uppercase tracking-[0.2em]">
+              <div className="p-8 bg-transparent border-t border-white/[0.08]">
+                <div className="text-white font-semibold text-xs mb-3 uppercase tracking-[0.2em]">
                   {project.category}
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-neutral-900">{project.title}</h3>
-                <p className="text-neutral-600 mb-6 font-light leading-relaxed">{project.description}</p>
+                <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
+                <p className="text-neutral-400 mb-6 font-light leading-relaxed">{project.description}</p>
                 
                 <ul className="space-y-3 mb-8">
                   {project.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-neutral-700 font-light">
-                      <div className="p-1.5 rounded-full bg-[#d4af37]/10 text-[#d4af37]">
+                    <li key={i} className="flex items-center gap-3 text-neutral-300 font-light">
+                      <div className="p-1.5 rounded-full bg-white/10 text-white">
                         {feature.icon}
                       </div>
                       <span>{feature.text}</span>
@@ -146,7 +146,7 @@ export default function FeaturedProjects() {
 
                 <a
                   href={project.link}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#d4af37] text-white font-semibold hover:bg-[#c5a059] transition-colors shadow-lg shadow-[#d4af37]/20 w-full"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full"
                 >
                   View Live Website <ExternalLink size={18} />
                 </a>

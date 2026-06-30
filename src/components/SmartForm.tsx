@@ -54,7 +54,7 @@ Please contact me.`;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-neutral-900"
+            className="text-4xl md:text-5xl font-bold font-outfit mb-4 text-white"
           >
             Start Your <span className="text-gradient">Project</span>
           </motion.h2>
@@ -63,7 +63,7 @@ Please contact me.`;
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-neutral-600 text-lg max-w-2xl mx-auto font-light"
+            className="text-neutral-400 text-lg max-w-2xl mx-auto font-light"
           >
             Fill out the form below and I&apos;ll get back to you instantly via WhatsApp.
           </motion.p>
@@ -78,7 +78,7 @@ Please contact me.`;
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-neutral-700">Name</label>
+                <label className="text-sm font-medium text-neutral-400">Name</label>
                 <input
                   required
                   type="text"
@@ -86,11 +86,11 @@ Please contact me.`;
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full bg-transparent border border-neutral-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all text-neutral-900 placeholder:text-neutral-400"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all text-white placeholder:text-neutral-500"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-neutral-700">Phone</label>
+                <label className="text-sm font-medium text-neutral-400">Phone</label>
                 <input
                   required
                   type="tel"
@@ -98,14 +98,14 @@ Please contact me.`;
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+91 00000 00000"
-                  className="w-full bg-transparent border border-neutral-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all text-neutral-900 placeholder:text-neutral-400"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all text-white placeholder:text-neutral-500"
                 />
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-neutral-700">Email</label>
+                <label className="text-sm font-medium text-neutral-400">Email</label>
                 <input
                   required
                   type="email"
@@ -113,17 +113,17 @@ Please contact me.`;
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@company.com"
-                  className="w-full bg-transparent border border-neutral-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all text-neutral-900 placeholder:text-neutral-400"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all text-white placeholder:text-neutral-500"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-neutral-700">Business Type</label>
+                <label className="text-sm font-medium text-neutral-400">Business Type</label>
                 <select
                   required
                   name="businessType"
                   value={formData.businessType}
                   onChange={handleChange}
-                  className="w-full bg-transparent border border-neutral-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all text-neutral-900 appearance-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all text-white appearance-none"
                 >
                   <option value="" disabled className="text-black">Select Business Type</option>
                   <option className="text-black" value="E-commerce">E-commerce</option>
@@ -136,13 +136,13 @@ Please contact me.`;
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-neutral-700">Budget</label>
+              <label className="text-sm font-medium text-neutral-400">Budget</label>
               <select
                 required
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full bg-transparent border border-neutral-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all text-neutral-900 appearance-none"
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all text-white appearance-none"
               >
                 <option value="" disabled className="text-black">Select your Budget scope</option>
                 <option className="text-black" value="₹3,999 - Landing Page">₹3,999 - Landing Page</option>
@@ -153,7 +153,7 @@ Please contact me.`;
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-neutral-700">Requirement</label>
+              <label className="text-sm font-medium text-neutral-400">Requirement</label>
               <textarea
                 required
                 name="requirement"
@@ -161,13 +161,13 @@ Please contact me.`;
                 onChange={handleChange}
                 placeholder="Tell me a bit about your project..."
                 rows={4}
-                className="w-full bg-transparent border border-neutral-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition-all text-neutral-900 resize-none placeholder:text-neutral-400"
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all text-white resize-none placeholder:text-neutral-500"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full py-4 rounded-xl bg-[#d4af37] text-white font-semibold text-lg hover:bg-[#c5a059] shadow-lg shadow-[#d4af37]/20 transition-colors flex items-center justify-center gap-2"
+              className="w-full py-4 rounded-xl bg-white text-black font-semibold text-lg hover:bg-neutral-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-colors flex items-center justify-center gap-2"
             >
               Submit & Open WhatsApp <Send size={20} />
             </button>

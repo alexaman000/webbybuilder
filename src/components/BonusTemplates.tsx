@@ -34,16 +34,16 @@ export default function BonusTemplates() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/5 mb-6 text-neutral-800 font-medium text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-6 text-neutral-300 font-medium text-sm"
             >
-              <Layout size={16} className="text-[#d4af37]" />
-              <span className="uppercase tracking-widest text-xs font-bold text-neutral-600">Free Previews</span>
+              <Layout size={16} className="text-white" />
+              <span className="uppercase tracking-widest text-xs font-bold text-neutral-400">Free Previews</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold font-outfit text-neutral-900"
+              className="text-4xl md:text-5xl font-bold font-outfit text-white"
             >
               See Live Demo <span className="text-gradient">Templates</span>
             </motion.h2>
@@ -54,7 +54,7 @@ export default function BonusTemplates() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-neutral-600 max-w-sm mt-6 md:mt-0 md:text-right font-light"
+            className="text-neutral-400 max-w-sm mt-6 md:mt-0 md:text-right font-light"
           >
             Hover over these mockups to see the premium quality of our pre-built layouts. Click to explore live previews!
           </motion.p>
@@ -86,20 +86,20 @@ export default function BonusTemplates() {
                 </div>
               </div>
               
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white to-transparent p-6 pt-20 translate-y-4 group-hover:translate-y-0 transition-transform hidden md:block">
-                <span className="text-[#d4af37] text-xs font-semibold uppercase tracking-[0.1em] mb-1 block">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 pt-20 translate-y-4 group-hover:translate-y-0 transition-transform hidden md:block">
+                <span className="text-white text-xs font-semibold uppercase tracking-[0.1em] mb-1 block">
                   {template.category}
                 </span>
-                <h3 className="text-2xl font-bold text-neutral-900 leading-tight">
+                <h3 className="text-2xl font-bold text-white leading-tight">
                   {template.name}
                 </h3>
               </div>
               
-              <div className="absolute inset-x-0 bottom-0 bg-white/80 backdrop-blur-md p-6 md:hidden">
-                <span className="text-[#d4af37] text-xs font-semibold uppercase tracking-[0.1em] mb-1 block">
+              <div className="absolute inset-x-0 bottom-0 bg-black/80 backdrop-blur-md p-6 md:hidden border-t border-white/10">
+                <span className="text-white text-xs font-semibold uppercase tracking-[0.1em] mb-1 block">
                   {template.category}
                 </span>
-                <h3 className="text-xl font-bold text-neutral-900 leading-tight">
+                <h3 className="text-xl font-bold text-white leading-tight">
                   {template.name}
                 </h3>
               </div>
