@@ -13,6 +13,7 @@ export default function SmartForm() {
     budget: "",
     requirement: "",
   });
+  const [targetPhone, setTargetPhone] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -40,7 +41,8 @@ ${requirement}
 
 Please contact me.`;
 
-    const whatsappUrl = `https://wa.me/918210330277?text=${encodeURIComponent(message)}`;
+    const phoneToContact = targetPhone || "918210330277";
+    const whatsappUrl = `https://wa.me/${phoneToContact}?text=${encodeURIComponent(message)}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, "_blank");
@@ -165,12 +167,22 @@ Please contact me.`;
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="w-full py-4 rounded-xl bg-white text-black font-semibold text-lg hover:bg-neutral-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-colors flex items-center justify-center gap-2"
-            >
-              Submit & Open WhatsApp <Send size={20} />
-            </button>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <button
+                type="submit"
+                onClick={() => setTargetPhone("918210330277")}
+                className="w-full py-4 rounded-xl bg-white text-black font-semibold text-lg hover:bg-neutral-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-colors flex items-center justify-center gap-2"
+              >
+                Send to Aman (Founder) <Send size={20} />
+              </button>
+              <button
+                type="submit"
+                onClick={() => setTargetPhone("917856959016")}
+                className="w-full py-4 rounded-xl border border-white/20 bg-white/5 text-white font-semibold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+              >
+                Send to Krishav (Co-Founder) <Send size={20} />
+              </button>
+            </div>
           </form>
         </motion.div>
       </div>

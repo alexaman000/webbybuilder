@@ -6,32 +6,32 @@ import { Mail, Phone, MessageCircle, Globe, User } from "lucide-react";
 export default function About() {
   const contactLinks = [
     {
-      icon: <Mail size={20} />,
-      label: "Email Me",
-      value: "alexaman000r@gmail.com",
-      href: "mailto:alexaman000r@gmail.com",
-      color: "bg-red-500/10 text-red-500",
-    },
-    {
       icon: <Phone size={20} />,
-      label: "Call Me",
+      label: "Aman Raj (Founder)",
       value: "+91 8210330277",
       href: "tel:+918210330277",
       color: "bg-blue-500/10 text-blue-500",
     },
     {
+      icon: <Phone size={20} />,
+      label: "Krishav Raj (Co-Founder)",
+      value: "+91 7856959016",
+      href: "tel:+917856959016",
+      color: "bg-purple-500/10 text-purple-500",
+    },
+    {
       icon: <MessageCircle size={20} />,
-      label: "WhatsApp",
+      label: "WhatsApp Aman",
       value: "+91 8210330277",
       href: "https://wa.me/918210330277?text=Hello%20WebbyBuilder%20%F0%9F%9A%80",
       color: "bg-green-500/10 text-green-500",
     },
     {
-      icon: <Globe size={20} />,
-      label: "LinkedIn",
-      value: "Aman Raj",
-      href: "https://www.linkedin.com/in/aman-raj-51468b383",
-      color: "bg-indigo-500/10 text-indigo-500",
+      icon: <MessageCircle size={20} />,
+      label: "WhatsApp Krishav",
+      value: "+91 7856959016",
+      href: "https://wa.me/917856959016?text=Hello%20WebbyBuilder%20%F0%9F%9A%80",
+      color: "bg-emerald-500/10 text-emerald-500",
     },
   ];
 
@@ -48,13 +48,13 @@ export default function About() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-neutral-300 font-medium text-sm">
               <User size={16} className="text-white" />
-              <span className="uppercase tracking-widest text-xs font-bold text-neutral-400">About Me</span>
+              <span className="uppercase tracking-widest text-xs font-bold text-neutral-400">About Us</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white">
-              Hi, I am <span className="text-gradient">Aman Raj</span>
+              Hi, we are <span className="text-gradient">Aman & Krishav</span>
             </h2>
             <p className="text-neutral-400 text-lg leading-relaxed max-w-lg font-light">
-              I am a passionate Full Stack Developer specializing in building high-performance, premium websites that turn visitors into paying clients. My mission is to empower businesses with digital solutions that are fast, aesthetic, and highly converting.
+              We are a passionate team specializing in building high-performance, premium websites that turn visitors into paying clients. Aman Raj (Founder) and Krishav Raj (Co-Founder) are on a mission to empower businesses with digital solutions that are fast, aesthetic, and highly converting.
             </p>
             
             <div className="pt-4 grid sm:grid-cols-2 gap-4">
