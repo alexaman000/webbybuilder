@@ -146,10 +146,16 @@ Please contact me.`;
                 onChange={handleChange}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/30 transition-all text-white appearance-none"
               >
-                <option value="" disabled className="text-black">Select your Budget scope</option>
+                <option value="" disabled className="text-black">Select your Budget / Service</option>
                 <option className="text-black" value="₹3,999 - Landing Page">₹3,999 - Landing Page</option>
                 <option className="text-black" value="₹7,999 - Business Website">₹7,999 - Business Website</option>
                 <option className="text-black" value="₹14,999+ - E-commerce / Custom">₹14,999+ - E-commerce / Custom</option>
+                <option className="text-black" value="AI Promo Video - ₹350">AI Promo Video - ₹350</option>
+                <option className="text-black" value="AI Promo Videos Pack (10) - ₹3000">AI Promo Videos Pack (10) - ₹3000</option>
+                <option className="text-black" value="Social Media Management">Social Media Management</option>
+                <option className="text-black" value="Digital Marketing">Digital Marketing</option>
+                <option className="text-black" value="Branding & Graphic Design">Branding & Graphic Design</option>
+                <option className="text-black" value="SEO & Lead Generation">SEO & Lead Generation</option>
                 <option className="text-black" value="Not sure yet">Not sure yet</option>
               </select>
             </div>
@@ -167,20 +173,27 @@ Please contact me.`;
               ></textarea>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-3 gap-4">
               <button
                 type="submit"
                 onClick={() => setTargetPhone("918210330277")}
-                className="w-full py-4 rounded-xl bg-white text-black font-semibold text-lg hover:bg-neutral-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl bg-white text-black font-semibold text-sm hover:bg-neutral-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-colors flex items-center justify-center gap-2"
               >
-                Send to Aman (Founder) <Send size={20} />
+                Aman (Founder) <Send size={16} />
               </button>
               <button
                 type="submit"
                 onClick={() => setTargetPhone("917856959016")}
-                className="w-full py-4 rounded-xl border border-white/20 bg-white/5 text-white font-semibold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl border border-white/20 bg-white/5 text-white font-semibold text-sm hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
               >
-                Send to Krishav (Co-Founder) <Send size={20} />
+                Krishav (Marketing) <Send size={16} />
+              </button>
+              <button
+                type="submit"
+                onClick={() => setTargetPhone("917856959016")} // Placeholder since no number for Aditya
+                className="w-full py-4 rounded-xl border border-white/20 bg-white/5 text-white font-semibold text-sm hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+              >
+                Aditya (AI Head) <Send size={16} />
               </button>
             </div>
           </form>

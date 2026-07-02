@@ -145,10 +145,10 @@ export default function FeaturedProjects() {
                 </ul>
 
                 <a
-                  href={project.link}
+                  href="#contact"
                   className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full"
                 >
-                  View Live Website <ExternalLink size={18} />
+                  Enquire Now
                 </a>
               </div>
             </motion.div>

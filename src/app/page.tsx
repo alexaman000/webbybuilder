@@ -3,8 +3,6 @@ import About from "@/components/About";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Services from "@/components/Services";
 import WhyChooseMe from "@/components/WhyChooseMe";
-import BonusTemplates from "@/components/BonusTemplates";
-import Blog from "@/components/Blog";
 import SmartForm from "@/components/SmartForm";
 
 export default function Home() {
@@ -14,8 +12,6 @@ export default function Home() {
       <FeaturedProjects />
       <Services />
       <WhyChooseMe />
-      <BonusTemplates />
-      <Blog />
       <SmartForm />
       <About />
     </main>

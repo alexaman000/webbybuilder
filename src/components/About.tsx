@@ -7,17 +7,10 @@ export default function About() {
   const contactLinks = [
     {
       icon: <Phone size={20} />,
-      label: "Aman Raj (Founder)",
+      label: "Aman Raj (Founder & Developer)",
       value: "+91 8210330277",
       href: "tel:+918210330277",
       color: "bg-blue-500/10 text-blue-500",
-    },
-    {
-      icon: <Phone size={20} />,
-      label: "Krishav Raj (Co-Founder)",
-      value: "+91 7856959016",
-      href: "tel:+917856959016",
-      color: "bg-purple-500/10 text-purple-500",
     },
     {
       icon: <MessageCircle size={20} />,
@@ -27,10 +20,17 @@ export default function About() {
       color: "bg-green-500/10 text-green-500",
     },
     {
-      icon: <MessageCircle size={20} />,
-      label: "WhatsApp Krishav",
+      icon: <Phone size={20} />,
+      label: "Krishav Raj (Co-founder & Marketing)",
       value: "+91 7856959016",
-      href: "https://wa.me/917856959016?text=Hello%20WebbyBuilder%20%F0%9F%9A%80",
+      href: "tel:+917856959016",
+      color: "bg-purple-500/10 text-purple-500",
+    },
+    {
+      icon: <MessageCircle size={20} />,
+      label: "Aditya Pandey (Co-founder & AI Engineer)",
+      value: "Reach out via WhatsApp",
+      href: "#contact",
       color: "bg-emerald-500/10 text-emerald-500",
     },
   ];
@@ -51,10 +51,10 @@ export default function About() {
               <span className="uppercase tracking-widest text-xs font-bold text-neutral-400">About Us</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white">
-              Hi, we are <span className="text-gradient">Aman & Krishav</span>
+              Welcome to <span className="text-gradient">Webby Builder</span>
             </h2>
             <p className="text-neutral-400 text-lg leading-relaxed max-w-lg font-light">
-              We are a passionate team specializing in building high-performance, premium websites that turn visitors into paying clients. Aman Raj (Founder) and Krishav Raj (Co-Founder) are on a mission to empower businesses with digital solutions that are fast, aesthetic, and highly converting.
+              We are a passionate agency specializing in building high-performance, premium websites and digital solutions that turn visitors into paying clients. Our expert team—Aman Raj (Founder & Developer), Krishav Raj (Co-founder & Marketing Head), and Aditya Pandey (Co-founder & AI Engineer)—is on a mission to empower businesses with solutions that are fast, aesthetic, highly converting, and supercharged by AI.
             </p>
             
             <div className="pt-4 grid sm:grid-cols-2 gap-4">
