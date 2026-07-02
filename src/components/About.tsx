@@ -27,10 +27,10 @@ export default function About() {
       color: "bg-purple-500/10 text-purple-500",
     },
     {
-      icon: <MessageCircle size={20} />,
+      icon: <Phone size={20} />,
       label: "Aditya Pandey (Co-founder & AI Engineer)",
-      value: "Reach out via WhatsApp",
-      href: "#contact",
+      value: "+91 94722 57397",
+      href: "tel:+919472257397",
       color: "bg-emerald-500/10 text-emerald-500",
     },
   ];

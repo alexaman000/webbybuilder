@@ -190,7 +190,7 @@ Please contact me.`;
               </button>
               <button
                 type="submit"
-                onClick={() => setTargetPhone("917856959016")} // Placeholder since no number for Aditya
+                onClick={() => setTargetPhone("919472257397")}
                 className="w-full py-4 rounded-xl border border-white/20 bg-white/5 text-white font-semibold text-sm hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
               >
                 Aditya (AI Head) <Send size={16} />

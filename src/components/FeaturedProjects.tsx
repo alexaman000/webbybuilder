@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, ShoppingCart, Calendar, Bell, Clock, Target, BookOpen, GraduationCap, Users, Trophy, Activity, MapPin, Dumbbell, Flame, CheckCircle, Building2, Wrench, Shield } from "lucide-react";
 import Image from "next/image";
 
@@ -79,6 +80,8 @@ export default function FeaturedProjects() {
     },
   ];
 
+  const [showProjects, setShowProjects] = useState(false);
+
   return (
     <section id="projects" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -102,58 +105,80 @@ export default function FeaturedProjects() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 max-w-3xl mx-auto gap-10">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group relative overflow-hidden premium-card"
+        <div className="flex justify-center mb-10">
+          <button
+            onClick={() => setShowProjects(!showProjects)}
+            className="px-8 py-4 rounded-full bg-white text-black font-bold text-lg hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] flex items-center gap-3"
+          >
+            {showProjects ? "Hide Featured Projects" : "See All Featured Projects"} 
+            <motion.div animate={{ rotate: showProjects ? 180 : 0 }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </motion.div>
+          </button>
+        </div>
+
+        <AnimatePresence>
+          {showProjects && (
+            <motion.div 
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="overflow-hidden"
             >
-              <div 
-                className={`h-64 md:h-80 w-full bg-gradient-to-br ${project.gradient} p-8 flex items-center justify-center relative overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="relative z-10 w-full h-full bg-black/20 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center overflow-hidden transition-transform duration-500"
-                >
-                  <span className="text-3xl md:text-5xl font-bold text-white select-none px-4 text-center leading-tight tracking-tight shadow-xl">
-                    {project.title.split('-')[0]}
-                  </span>
-                </motion.div>
-              </div>
+              <div className="grid grid-cols-1 max-w-3xl mx-auto gap-10 pb-10">
+                {projects.map((project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.6 }}
+                    className="group relative overflow-hidden premium-card"
+                  >
+                    <div 
+                      className={`h-64 md:h-80 w-full bg-gradient-to-br ${project.gradient} p-8 flex items-center justify-center relative overflow-hidden`}
+                    >
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        className="relative z-10 w-full h-full bg-black/20 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center overflow-hidden transition-transform duration-500"
+                      >
+                        <span className="text-3xl md:text-5xl font-bold text-white select-none px-4 text-center leading-tight tracking-tight shadow-xl">
+                          {project.title.split('-')[0]}
+                        </span>
+                      </motion.div>
+                    </div>
 
-              <div className="p-8 bg-transparent border-t border-white/[0.08]">
-                <div className="text-white font-semibold text-xs mb-3 uppercase tracking-[0.2em]">
-                  {project.category}
-                </div>
-                <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
-                <p className="text-neutral-400 mb-6 font-light leading-relaxed">{project.description}</p>
-                
-                <ul className="space-y-3 mb-8">
-                  {project.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-neutral-300 font-light">
-                      <div className="p-1.5 rounded-full bg-white/10 text-white">
-                        {feature.icon}
+                    <div className="p-8 bg-transparent border-t border-white/[0.08]">
+                      <div className="text-white font-semibold text-xs mb-3 uppercase tracking-[0.2em]">
+                        {project.category}
                       </div>
-                      <span>{feature.text}</span>
-                    </li>
-                  ))}
-                </ul>
+                      <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
+                      <p className="text-neutral-400 mb-6 font-light leading-relaxed">{project.description}</p>
+                      
+                      <ul className="space-y-3 mb-8">
+                        {project.features.map((feature, i) => (
+                          <li key={i} className="flex items-center gap-3 text-neutral-300 font-light">
+                            <div className="p-1.5 rounded-full bg-white/10 text-white">
+                              {feature.icon}
+                            </div>
+                            <span>{feature.text}</span>
+                          </li>
+                        ))}
+                      </ul>
 
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full"
-                >
-                  Enquire Now
-                </a>
+                      <a
+                        href="#contact"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full"
+                      >
+                        Enquire Now
+                      </a>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
-          ))}
-        </div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
